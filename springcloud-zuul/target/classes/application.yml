@@ -1,0 +1,26 @@
+spring: 
+  application:
+    name: zuul # 服务名称
+server: 
+  port: 8083 # 服务端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://wn:123456@localhost:8888/eureka/ # 服务注册中心地址  
+    registry-fetch-interval-seconds: 5  # 默认为30秒 表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+# routes to serviceId
+
+#zuul: 
+#  routes:  
+#    api-a:  
+#      path: /api-a/**
+#      serviceId: CONSUMER
+
+zuul: 
+   routes:
+      CONSUMER: /api-a/**
+      
+ribbon:   
+  ConnectTimeout: 60000 
+  ReadTimeout: 60000
+

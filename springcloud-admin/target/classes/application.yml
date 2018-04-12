@@ -1,0 +1,24 @@
+server:
+  port: 8085 # 服务端口
+
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://localhost:8888/eureka/ # 服务注册中心地址
+      defaultZone: http://wn:123456@localhost:8888/eureka/
+spring:
+  application:
+    name: CONSUMER # 服务名称
+    
+
+  freemarker: # FREEMARKER (FreeMarkerAutoConfiguration)
+     allow-request-override: false
+     cache: true
+     charset: UTF-8
+     check-template-location: true
+     content-type: text/html
+     enabled: true
+     expose-request-attributes: false
+     expose-session-attributes: false
+     expose-spring-macro-helpers: false 
+    

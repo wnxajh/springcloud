@@ -1,0 +1,25 @@
+# 服务端口
+server: 
+  port: 8888 
+  
+# 安全认证的配置  
+security:  
+  basic:  
+    enabled: true  
+  user:  
+    name: wn # 用户名  
+    password: 123456   # 用户密码  
+
+eureka:
+  instance:
+    hostname: localhost # 设置主机名
+  client: 
+    registerWithEureka: false # 是否向 Eureka 注册服务。该应用为服务注册中心，不需要自注册，设置为 false
+    fetchRegistry: false      # 是否检索服务。该应用为服务注册中心，职责为注册和发现服务，无需检索服务，设置为 false
+    serviceUrl:    
+         defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/  # 安全的注册地址 
+  server:
+    waitTimeInMsWhenSyncEmpty: 0 # 设置同步为空时的等待时间。默认 5 * MINUTES
+    enableSelfPreservation: false # #为了便于测试，取消eureka的保护模式，如果启动的话，比如api提供者关闭了，但是eureka仍然保留信息  
+  
+    
