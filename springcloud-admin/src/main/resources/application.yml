@@ -4,14 +4,38 @@ server:
 eureka:
   client:
     service-url:
-#      defaultZone: http://localhost:8888/eureka/ # 服务注册中心地址
-      defaultZone: http://wn:123456@localhost:8888/eureka/
+#      defaultZone: http://localhost:8889/eureka/ # 服务注册中心地址
+      defaultZone: http://wn:123456@localhost:8889/eureka/
 spring:
   application:
     name: CONSUMER # 服务名称
     
-
-  freemarker: # FREEMARKER (FreeMarkerAutoConfiguration)
+datasource: 
+  type: com.alibaba.druid.pool.DruidDataSource  
+  master:   
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/wn?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456 
+  slave: 
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/wn?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456
+      
+#mybatis config   
+mybatis: 
+    typeAliasesPackage: com.wn.model
+    mapperLocations: classpath*:com/wn/mapper/*.xml 
+    
+    
+pagehelper:
+  helperDialect: mysql
+  reasonable: false
+  supportMethodsArguments: true
+  params: count=countSql 
+  
+freemarker: # FREEMARKER (FreeMarkerAutoConfiguration)
      allow-request-override: false
      cache: true
      charset: UTF-8
@@ -21,4 +45,3 @@ spring:
      expose-request-attributes: false
      expose-session-attributes: false
      expose-spring-macro-helpers: false 
-    

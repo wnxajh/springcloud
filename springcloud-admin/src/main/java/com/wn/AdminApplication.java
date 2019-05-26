@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient // Eureka Discovery Client 标识
-@SpringBootApplication(scanBasePackages = {"org.springcloud.filter","org.springcloud.web"},exclude={DataSourceAutoConfiguration.class})// Spring Boot 应用标识
+@SpringBootApplication
 public class AdminApplication {
 
 	@Bean

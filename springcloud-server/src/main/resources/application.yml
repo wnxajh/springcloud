@@ -1,6 +1,6 @@
 # 服务端口
 server: 
-  port: 8888 
+  port: 8889 
   
 # 安全认证的配置  
 security:  

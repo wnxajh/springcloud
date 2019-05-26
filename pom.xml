@@ -6,9 +6,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-
-
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
@@ -19,7 +16,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
-
 		<!-- cloud -config -server 依赖包 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -32,7 +28,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 
 	<dependencyManagement>
 		<dependencies>
