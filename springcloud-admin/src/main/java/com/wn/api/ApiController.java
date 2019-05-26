@@ -19,11 +19,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.alibaba.fastjson.JSON;
 import com.wn.util.AjaxResult;
-import com.wn.util.User;
-import com.wn.util.UserBooks;
-import com.wn.util.UserGift;
-import com.wn.util.UserGiftConfig;
-import com.wn.util.excel.ExcelUtils;
+//import com.wn.util.UserBooks;
+//import com.wn.util.UserGiftConfig;
 
 @RestController
 @RequestMapping("/api/")
@@ -52,37 +49,37 @@ public class ApiController {
     }
     
     
-    @RequestMapping("/export")
-    public void export(HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException, InstantiationException {
-    	List<User> userList = new ArrayList<>();
-    	User user = new User();
-		user.setId(1);
-		user.setAge(22);
-		user.setUserName("wn0");
-		user.setMobile("15267175695");
-		user.setUserType(1);
-		user.setBoolType("");
-		List<UserGift> giftList = new ArrayList<>();
-		UserGift gift = new UserGift();
-		gift.setId(1);
-		gift.setUserId(1);
-		gift.setGiftName("笔记本011111111111111111111111111111111");
-		gift.setNum(1);
-		gift.setProvince("河南");
-		gift.setControry("中国");
-		gift.setCity("郑州");
-		giftList.add(gift);
-		
-		UserGift gift2 = new UserGift();
-		gift2.setId(1);
-		gift2.setUserId(1);
-		gift2.setGiftName("笔记本0");
-		gift2.setNum(1);
-		gift2.setProvince("河南");
-		gift2.setControry("中国");
-		gift2.setCity("郑州");
-		giftList.add(gift2);
-		user.setGiftList(giftList);
+//    @RequestMapping("/export")
+//    public void export(HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException, InstantiationException {
+//    	List<User> userList = new ArrayList<>();
+//    	User user = new User();
+//		user.setId(1);
+//		user.setAge(22);
+//		user.setUserName("wn0");
+//		user.setMobile("15267175695");
+//		user.setUserType(1);
+//		user.setBoolType("");
+//		List<UserGift> giftList = new ArrayList<>();
+//		UserGift gift = new UserGift();
+//		gift.setId(1);
+//		gift.setUserId(1);
+//		gift.setGiftName("笔记本011111111111111111111111111111111");
+//		gift.setNum(1);
+//		gift.setProvince("河南");
+//		gift.setControry("中国");
+//		gift.setCity("郑州");
+//		giftList.add(gift);
+//		
+//		UserGift gift2 = new UserGift();
+//		gift2.setId(1);
+//		gift2.setUserId(1);
+//		gift2.setGiftName("笔记本0");
+//		gift2.setNum(1);
+//		gift2.setProvince("河南");
+//		gift2.setControry("中国");
+//		gift2.setCity("郑州");
+//		giftList.add(gift2);
+//		user.setGiftList(giftList);
 		
     	
 //    	List<User> userList = new ArrayList<>();
@@ -132,7 +129,7 @@ public class ApiController {
 //		giftList.add(gift2);
 //		user.setGiftList(giftList);
 		
-		userList.add(user);
+//		userList.add(user);
 		
 		
 //		List<User> userList2 = new ArrayList<>();
@@ -155,7 +152,7 @@ public class ApiController {
 //		giftList1.add(gift1);
 //		user1.setGiftList(giftList1);
 //		userList2.add(user1);
-		System.out.println(JSON.toJSONString(userList));
-		ExcelUtils.exportExcel(request, response, "test吴南", new String[] {"test1"}, userList);
-    }
+//		System.out.println(JSON.toJSONString(userList));
+//		ExcelUtils.exportExcel(request, response, "test吴南", new String[] {"test1"}, userList);
+//    }
 }

@@ -1,6 +1,12 @@
 package com.wn.util;
 
-public class AjaxResult{
+import java.io.Serializable;
+
+public class AjaxResult implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private String msg;
 	

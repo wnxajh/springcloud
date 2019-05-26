@@ -67,12 +67,13 @@
 	</build>
 
 	<modules>
-		<module>springcloud-server</module>
+<!-- 		<module>springcloud-server</module> -->
 		<module>springcloud-common</module>
 		<module>springcloud-config</module>
 		<module>springcloud-ucenter</module>
 		<module>springcloud-zuul</module>
-    <module>springcloud-admin</module>
-    <module>springcloud-file</module>
-  </modules>
+	    <module>springcloud-admin</module>
+	    <module>springcloud-file</module>
+	    <module>springcloud-trade</module>
+    </modules>
 </project>
